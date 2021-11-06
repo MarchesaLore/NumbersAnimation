@@ -33,7 +33,9 @@ function animateValue(obj, start, end, duration) {
   }
   ````
   
-#AnimationOnce
+  
+<h1>Animation Once</h1>
+
  I first made it go through all my numbers they are all in span with class 'animate-numbers'
  from the span I got the obj span
  and the value in it (innerHTML) so that I have my end number, start will be 0 in this case and duration is the same for all of them
@@ -69,7 +71,10 @@ for animate once I had 2 goals:
       }
 ````
 
-#AnimationRestart
+
+
+<h1>Animation Restart</h1>
+
 1) Animate the object when visible like the previous example
 2) When animation is completed I add a class 'animate-numbers-completed' to the object
 ```rd
