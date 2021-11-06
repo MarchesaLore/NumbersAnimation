@@ -1,0 +1,81 @@
+.container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* type 1*/
+div .type1{
+    font: 800 40px system-ui;
+  }
+
+  
+  /* type 2 */
+  div.type2::after {
+    font: 800 40px system-ui;
+    content: counter(count);
+    animation: counter 5s linear infinite alternate;
+    counter-reset: count 0;
+  }
+  
+  @keyframes counter {
+    0% {
+      counter-increment: count 0;
+    }
+    10% {
+      counter-increment: count 1;
+    }
+    20% {
+      counter-increment: count 2;
+    }
+    30% {
+      counter-increment: count 3;
+    }
+    40% {
+      counter-increment: count 4;
+    }
+    50% {
+      counter-increment: count 5;
+    }
+    60% {
+      counter-increment: count 6;
+    }
+    70% {
+      counter-increment: count 7;
+    }
+    80% {
+      counter-increment: count 8;
+    }
+    90% {
+      counter-increment: count 9;
+    }
+    100% {
+      counter-increment: count 10;
+    }
+  }
+
+  /* type 3 */
+  .counter {
+    width: 100px;
+    font: 800 40px system-ui;
+    overflow: hidden;
+  }
+  .numbers {
+    width: auto;
+    display: flex;
+    animation: countNumber 4s infinite alternate;
+    animation-timing-function: steps(10);
+  }
+  .numbers div {
+    text-align: center;
+    flex: 0 0 100px;
+  }
+  
+  @keyframes countNumber {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: -1000px;
+    }
+  }
