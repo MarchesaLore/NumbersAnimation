@@ -11,3 +11,4 @@ this has 2 blocks of numbers increasing, the first is visible right on the openi
 2) Animation Restart
 the animation will go from beginning to end but when the numbers are not anymore visible on the screen and then visible again they will get started again, so just go to the page and scroll up and dow and you'll see the animation going again.
 
+![image](https://user-images.githubusercontent.com/22336407/140591274-79464031-f697-4dcf-a5aa-8527bc6fc68c.png)
