@@ -30,9 +30,12 @@ function animateValue(obj, start, end, duration) {
        // animateValue(elemntspan, 0,strhtml, 5000);
        // elemntspan.classList.remove("animate-numbers");
       //}    
+
       // checking for partial visibility
       if(position.top < window.innerHeight && position.bottom >= 0) {
+        //if visible then start animation
         animateValue(elemntspan, 0,strhtml, 5000);
+        //remove class = guarantee it gets played only once
         elemntspan.classList.remove("animate-numbers");
       }
     }

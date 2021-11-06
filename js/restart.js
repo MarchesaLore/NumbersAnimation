@@ -8,6 +8,7 @@ function animateValue(obj, start, end, duration) {
     if (progress < 1) {
       window.requestAnimationFrame(step);
     } else {
+      //when animation is completed I add this class
       obj.classList.add("animate-numbers-completed");
     }
   };
@@ -25,19 +26,23 @@ function executeAnimation() {
     var elemntspan = numbers.item(i);
     var position = elemntspan.getBoundingClientRect();
     var strhtml = numbers.item(i).innerHTML;
-
+    //check if numbers with this class are visible
     if (position.top < window.innerHeight && position.bottom >= 0) {
+      //if they are animate
       animateValue(elemntspan, 0, strhtml, 5000);
+      //and remove the class so that they don't restart to each scroll
       elemntspan.classList.remove("animate-numbers");
     }
   }
 
+  //check all completed animations if they go out of frame
   var numbersout = document.getElementsByClassName("animate-numbers-completed");
   for (var i = 0; i < numbersout.length; i++) {
     var elemntspan = numbersout.item(i);
     var position = elemntspan.getBoundingClientRect();
 
     if (position.top < window.innerHeight && position.bottom >= 0) {
+      //if they are ouf of frame then remove the class completed and make them ready to go again
       elemntspan.classList.remove("animate-numbers-completed");
       elemntspan.classList.add("animate-numbers");
     }
