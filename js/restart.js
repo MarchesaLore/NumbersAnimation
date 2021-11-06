@@ -16,12 +16,16 @@ function animateValue(obj, start, end, duration) {
 }
 
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () {  
+  //first restore any completed animation that are out of frame
+  restoredCompletedAnimations();
+
+  //then execute animations of elements that are visible
   executeAnimation();
 });
 
 
-function executeAnimation() {
+function restoredCompletedAnimations() {
   //check all completed animations if they go out of frame
   var numbersout = document.getElementsByClassName("animate-numbers-completed");
   for (var i = 0; i < numbersout.length; i++) {
@@ -33,7 +37,9 @@ function executeAnimation() {
       elemntspan.classList.add("animate-numbers");
     }
   }
+}
 
+function executeAnimation() {
   var numbers = document.getElementsByClassName("animate-numbers");
   for (var i = 0; i < numbers.length; i++) {
     var elemntspan = numbers.item(i);
